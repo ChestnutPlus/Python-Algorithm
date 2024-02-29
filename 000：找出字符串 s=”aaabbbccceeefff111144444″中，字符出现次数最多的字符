@@ -1,0 +1,46 @@
+（1）考虑去重，首先将字符串进行过滤去重，这样在根据这些字符进行循环查询时，将会减少循环次数，提升效率。但是本人写的代码较为臃肿，有更好的希望留言评论
+
+str = 'a1fsfs111bbbcccccvvvvvnnnnboooooosssnb'
+class Countvalue():
+def countvalue(self, str1)
+利用 set 自身的去重功能
+param str1: 对传进来的字符串过滤
+return: 返回一个不含重复字符的 list
+
+list1 = [] result = [] for x in str1:
+list1.append(x)
+result = set(list1)
+return result
+def count(self, str1)
+对已经去重的 list 进行遍历，因已去重
+从而减少循环次数，提高检索效率
+
+list = Countvalue().countvalue(str1)
+a = 0
+tump = {}
+for x in list:
+test = str1.count(x)
+if test > a:
+tump.clear()
+a = test
+tump[x] = a
+elif test == a:
+a = test
+tump[x] = a
+return tump
+if __name__ == '__main__':
+print(Countvalue().count(str))
+（2）不考虑去重
+
+s = "xssdddeeeeeeeffff"
+max_times = 0
+result = {}
+for i in s:
+if s.count(i) > max_times:
+result.clear()
+result[i] = s.count(i)
+max_times = s.count(i)
+elif s.count(i) == max_times:
+result[i] = s.count(i)
+print result
+
