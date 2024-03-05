@@ -1,0 +1,17 @@
+【思路】：知道 python 有时间元组这一概念，这道题完全不需要计算。
+时间元组包含九个属性
+tm_year 年
+tm_mon 月 (1~12)
+tm_mday 日 (1~31)
+tm_hour 时 (0~23)
+tm_min 分 (0~59)
+tm_sec 秒 (0~61, 60 或 61 是闰秒)
+tm_wday 星期 (0~6, 0 是周一)
+tm_yday 第几天 (1~366, 366 是儒略历)
+tm_isdst 夏令时 (平时用不到)
+
+import time
+date = input('输入时间(例如2018-01-23):')
+st = time.strptime(date,'%Y-%m-%d') # 时间文本转化成时间元祖
+num = st.tm_yday
+print(num)
