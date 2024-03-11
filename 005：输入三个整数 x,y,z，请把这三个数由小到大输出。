@@ -1,0 +1,6 @@
+print('输入三个数字')
+x = input('输入第1个数字:')
+y = input('输入第2个数字:')
+z = input('输入第3个数字:')
+l = [x,y,z] arr = sorted(l) # 你也可以使用list.sort()方法来排序，此时list本身将被修改
+print(arr)
