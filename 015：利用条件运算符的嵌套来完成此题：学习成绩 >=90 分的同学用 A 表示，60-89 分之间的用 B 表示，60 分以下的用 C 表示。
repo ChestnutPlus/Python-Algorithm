@@ -1,0 +1,9 @@
+【思路】：if-else 基本用法，没啥说的。
+
+score = float(input('输入一个成绩:'))
+if score>=90:
+print('A')
+elif score>=60:
+print('B')
+else:
+print('C')
